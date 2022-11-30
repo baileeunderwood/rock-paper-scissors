@@ -34,9 +34,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#h1{
-  font-size: 5000px;
-}
 
 img {
   /* For responsive images that adjust & adapt */

@@ -36,9 +36,13 @@ else if (sessionStorage.playerchoice == sessionStorage.opponentchoice){
 //CREATES NOTIFICATION 
 if(sessionStorage.result == "win") {
     document.getElementById("result").innerHTML="You Won!";
+    localStorage.wins++;
+    document.getElementById("pscore").innerHTML = localStorage.wins;
 }
 else if(sessionStorage.result == "lose") {
     document.getElementById("result").innerHTML="You Lose!";
+    localStorage.losses++;
+    document.getElementById("oscore").innerHTML = localStorage.losses;
 }
 else if(sessionStorage.result == "tie") {
     document.getElementById("result").innerHTML="It's A Tie!";
