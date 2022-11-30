@@ -33,4 +33,16 @@ else if((sessionStorage.playerchoice == "scissors") && (sessionStorage.opponentc
 else if (sessionStorage.playerchoice == sessionStorage.opponentchoice){
     sessionStorage.result = "tie";
 }
+//CREATES NOTIFICATION 
+if(sessionStorage.result == "win") {
+    document.getElementById("result").innerHTML="You Won!";
+}
+else if(sessionStorage.result == "lose") {
+    document.getElementById("result").innerHTML="You Lose!";
+}
+else if(sessionStorage.result == "tie") {
+    document.getElementById("result").innerHTML="It's A Tie!";
+}
+//SHOWS OPPONENTS CHOICE
+document.getElementById("o-img").src="svg/"+sessionStorage.opponentchoice+".svg";
 }
