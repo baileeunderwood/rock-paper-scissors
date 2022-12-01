@@ -1,3 +1,6 @@
+//MAKES SCORE WORK > WILL RESET EACH TIME YOU LEAVE THE PAGE
+sessionStorage.wins = 0;
+sessionStorage.losses = 0;
 //PLAYS GAME
 function game(x){
     sessionStorage.playerchoice = x;
@@ -36,13 +39,13 @@ else if (sessionStorage.playerchoice == sessionStorage.opponentchoice){
 //CREATES NOTIFICATION 
 if(sessionStorage.result == "win") {
     document.getElementById("result").innerHTML="You Won!";
-    localStorage.wins++;
-    document.getElementById("pscore").innerHTML = localStorage.wins;
+    sessionStorage.wins++;
+    document.getElementById("pscore").innerHTML = sessionStorage.wins;
 }
 else if(sessionStorage.result == "lose") {
     document.getElementById("result").innerHTML="You Lose!";
-    localStorage.losses++;
-    document.getElementById("oscore").innerHTML = localStorage.losses;
+    sessionStorage.losses++;
+    document.getElementById("oscore").innerHTML = sessionStorage.losses;
 }
 else if(sessionStorage.result == "tie") {
     document.getElementById("result").innerHTML="It's A Tie!";
